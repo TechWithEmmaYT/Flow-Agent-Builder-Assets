@@ -12,14 +12,13 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Check, Copy, Code } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 export default function CodeDialog({ workflowId }: { workflowId?: string }) {
   const [open, setOpen] = useState(false);
-  const [mode, setMode] = useState<"script" | "iframe">("script");
   const [copied, setCopied] = useState(false);
 
-const domain = process.env.NEXT_PUBLIC_APP_URL;
+  const domain = process.env.NEXT_PUBLIC_APP_URL;
+
   const code = `<script src="${domain}/embed/embed.min.js" data-workflow-id="${workflowId}"></script>`;
 
   const copyToClipboard = () => {
@@ -30,7 +29,7 @@ const domain = process.env.NEXT_PUBLIC_APP_URL;
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger>
+      <DialogTrigger asChild>
         <Button variant="ghost" size="sm" className="h-8 gap-2">
           <Code className="size-3.5" />
           Code
@@ -57,7 +56,8 @@ const domain = process.env.NEXT_PUBLIC_APP_URL;
               </Button>
             </div>
             <div className="p-4 overflow-x-auto">
-              <pre className="text-sm font-mono text-white whitespace-pre-wrap break-all">
+              <pre className="text-sm font-mono
+              text-white dark:text-background whitespace-pre-wrap break-all">
                 {code}
               </pre>
             </div>

@@ -119,7 +119,7 @@ const MentionInput = ({
       padding: "8px",
       height: multiline ? undefined : 32,
       minHeight: multiline ? 120 : 32,
-      maxHeight: multiline ? 100 : undefined,
+      //maxHeight: multiline ? 100 : undefined,
       overflowY: multiline ? "auto" : "hidden",
       boxSizing: "border-box",
       border: "none",
