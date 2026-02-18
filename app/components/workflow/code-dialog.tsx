@@ -19,8 +19,7 @@ export default function CodeDialog({ workflowId }: { workflowId?: string }) {
   const [mode, setMode] = useState<"script" | "iframe">("script");
   const [copied, setCopied] = useState(false);
 
-  const domain = window.location.origin;
-
+const domain = process.env.NEXT_PUBLIC_APP_URL;
   const code = `<script src="${domain}/embed/embed.min.js" data-workflow-id="${workflowId}"></script>`;
 
   const copyToClipboard = () => {
