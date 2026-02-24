@@ -1,11 +1,8 @@
 # 🤖 Flow AI Assets – AI Agent Workflow Builder
 
-> ### Complete Source Code + Envs
+> ### Complete Source code + Envs (50% OFF)
 >
 > 👉 **[Get Full Flow AI Repository](https://techwithemma.gumroad.com/l/dwdhpq)**
-
-> 👉 **[Read License Terms](YOUR_LICENSE_LINK_HERE)**
-
 ---
 
 ## 🗝️ Key Features
